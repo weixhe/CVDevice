@@ -26,11 +26,11 @@ public class CVBantterManager {
     
     weak var delegate: CVBantterManagerDelegate?
     
-    private(set) var capacity: UInt?    // 电池容量
-    private(set) var voltage: UInt? // 电压
+    var capacity: UInt?    // 电池容量
+    var voltage: UInt? // 电压
     
-    private(set) var levelPercent: UInt?    // 电量百分比
-    private(set) var status: String?    // 状态
+    var levelPercent: UInt?    // 电量百分比
+    var status: String?    // 状态
     
 }
 
