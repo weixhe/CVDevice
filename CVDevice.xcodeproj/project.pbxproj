@@ -52,7 +52,6 @@
 				3595C08E0544019A4998D8B7 /* Pods-CVDevice.debug.xcconfig */,
 				63B9EBA03A45E730B7BAB318 /* Pods-CVDevice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
