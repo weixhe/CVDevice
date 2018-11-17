@@ -97,9 +97,9 @@ private extension CVBantterManager {
 }
 
 // MARK: - Set Get
-private extension CVBantterManager {
+extension CVBantterManager {
     // 能否开启监听
-    private var isEnabledMonitoring: Bool {
+    var isEnabledMonitoring: Bool {
         return UIDevice.current.isBatteryMonitoringEnabled
     }
 
