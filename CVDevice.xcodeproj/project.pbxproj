@@ -15,9 +15,12 @@
 		84C2F5EC219FC2F200483512 /* CVDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2F5EA219FC2F200483512 /* CVDevice.swift */; };
 		84C2F5ED219FC2F200483512 /* iPhoneModels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C2F5EB219FC2F200483512 /* iPhoneModels.plist */; };
 		84C2F5F121A0081100483512 /* CVBatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2F5F021A0081100483512 /* CVBatteryManager.swift */; };
+		90AAF66985CB2BFF8536FAAE /* Pods_CVDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E099380D2F26D771DF8B65 /* Pods_CVDevice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3595C08E0544019A4998D8B7 /* Pods-CVDevice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVDevice.debug.xcconfig"; path = "Target Support Files/Pods-CVDevice/Pods-CVDevice.debug.xcconfig"; sourceTree = "<group>"; };
+		63B9EBA03A45E730B7BAB318 /* Pods-CVDevice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVDevice.release.xcconfig"; path = "Target Support Files/Pods-CVDevice/Pods-CVDevice.release.xcconfig"; sourceTree = "<group>"; };
 		84C2F5D1219FC19700483512 /* CVDevice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVDevice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C2F5D4219FC19700483512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C2F5D6219FC19700483512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		84C2F5EA219FC2F200483512 /* CVDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVDevice.swift; sourceTree = "<group>"; };
 		84C2F5EB219FC2F200483512 /* iPhoneModels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iPhoneModels.plist; sourceTree = "<group>"; };
 		84C2F5F021A0081100483512 /* CVBatteryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVBatteryManager.swift; sourceTree = "<group>"; };
+		D2E099380D2F26D771DF8B65 /* Pods_CVDevice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CVDevice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90AAF66985CB2BFF8536FAAE /* Pods_CVDevice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4934A8B96489FB4871E8B159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3595C08E0544019A4998D8B7 /* Pods-CVDevice.debug.xcconfig */,
+				63B9EBA03A45E730B7BAB318 /* Pods-CVDevice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84C2F5C8219FC19700483512 = {
 			isa = PBXGroup;
 			children = (
 				84C2F5D3219FC19700483512 /* CVDevice */,
 				84C2F5D2219FC19700483512 /* Products */,
+				4934A8B96489FB4871E8B159 /* Pods */,
+				D48FC422BD77EB5B44979A89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +98,14 @@
 			path = CVDevice;
 			sourceTree = "<group>";
 		};
+		D48FC422BD77EB5B44979A89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2E099380D2F26D771DF8B65 /* Pods_CVDevice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C2F5E3219FC19900483512 /* Build configuration list for PBXNativeTarget "CVDevice" */;
 			buildPhases = (
+				D622B036AFB3A2FAB54A939A /* [CP] Check Pods Manifest.lock */,
 				84C2F5CD219FC19700483512 /* Sources */,
 				84C2F5CE219FC19700483512 /* Frameworks */,
 				84C2F5CF219FC19700483512 /* Resources */,
+				5C64013775703A28A5E773FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C64013775703A28A5E773FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CVDevice/Pods-CVDevice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CVDevice/Pods-CVDevice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D622B036AFB3A2FAB54A939A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CVDevice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84C2F5CD219FC19700483512 /* Sources */ = {
@@ -300,6 +374,7 @@
 		};
 		84C2F5E4219FC19900483512 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3595C08E0544019A4998D8B7 /* Pods-CVDevice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +394,7 @@
 		};
 		84C2F5E5219FC19900483512 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63B9EBA03A45E730B7BAB318 /* Pods-CVDevice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

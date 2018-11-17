@@ -20,6 +20,9 @@ class ViewController: UIViewController {
                     IP地址：\(CVDevice.getIPAddresses())
                     WIFI名：\(CVDevice.getWifiName())
                     MAC地址：\(CVDevice.getWifiMacAddress())
+                    系统版本号：\(CVDevice.sysVersion)
+                    系统名称：\(CVDevice.sysName)
+                    唯一标识：\(CVDevice.getUUID())
                    """
         
         let label = UILabel(frame: CGRect(x: 20, y: 100, width: self.view.frame.width - 40, height: 500))

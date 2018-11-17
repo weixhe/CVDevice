@@ -11,7 +11,9 @@
 /// 
 
 import Foundation
+import UIKit
 import SystemConfiguration.CaptiveNetwork
+import KeychainAccess
 
 public struct CVDevice {
     
@@ -85,12 +87,36 @@ public struct CVDevice {
         return self.getWIFIInfo().1
     }
     
+    /// 设备的唯一标示UUID（这里的UUID是不改变的，除非重置手机）
+    static func getUUID() -> String {
+        
+        struct PriviteKey {
+            static let server = "com.caven.project.keychain"
+            static let UUID = "com.caven.project.UUID"
+        }
+        
+        var uuid = try! Keychain.init(service: PriviteKey.server).get(PriviteKey.UUID)
+        if uuid == nil {
+            uuid = NSUUID().uuidString
+            try! Keychain.init(service: PriviteKey.server).set(uuid!, key: PriviteKey.UUID)
+        }
+        
+        return uuid!
+    }
     
     
 }
 
-private extension CVDevice {
+extension CVDevice {
+    /// 系统版本号
+    static let sysVersion = UIDevice.current.systemVersion
+    /// 系统的名称， eg:"iOS", "tvOS", "watchOS", "macOS"
+    static let sysName = UIDevice.current.systemName
     
+}
+
+// MARK: - Pravite Method
+private extension CVDevice {
     
     typealias IPName = String
     typealias IPMacAddress = String
@@ -109,8 +135,6 @@ private extension CVDevice {
         }
         return (ssid!, mac!)
     }
-    
-    
     
     
 }

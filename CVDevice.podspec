@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.author             = { "weixhe" => "workerwei@163.com" }  #作者
   s.platform     = :ios, "8.0"                  #支持的平台和版本号
   s.source       = { :git => "https://github.com/weixhe/CVDevice.git", :tag => "1.0.0" }         #存储库的git地址，以及tag值
-  s.source_files  =  "CVDevice/CVDevice/**/*.{swift}" #需要托管的源代码路径
+  s.source_files =  "CVDevice/CVDevice/**/*.{swift}" #需要托管的源代码路径
   s.requires_arc = true #是否支持ARC
-  # s.dependency "Masonry", "~> 1.0.0"    #所依赖的第三方库，没有就不用写
+  s.dependency "KeychainAccess"    #所依赖的第三方库，没有就不用写
 
 end
