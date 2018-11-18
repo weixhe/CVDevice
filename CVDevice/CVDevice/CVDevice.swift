@@ -103,8 +103,6 @@ public struct CVDevice {
         
         return uuid!
     }
-    
-    
 }
 
 extension CVDevice {
